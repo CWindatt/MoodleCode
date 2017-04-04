@@ -1,0 +1,29 @@
+<html>
+<link rel="stylesheet" type="text/css" href="conversion.css">
+<script src="conversion.js"></script>
+<script src="../lib/csharp/syntax.js"></script>
+<script src="../lib/lib/syntax.js"></script>
+<body>
+
+<p>Convert c-sharp code to Moodle NWiki Markup.</p>
+Input:<br>
+<textarea id="codeInput" placeholder="Insert your code snippet here..."></textarea><br>
+<br>
+<button id="convertButton">Convert
+</button><br>
+<br>
+Output:<br>
+<textarea id="codeOutput" placeholder="Converted text will be output here..."></textarea><br>
+
+<script>
+var libSyntax = getLibSyntax();
+var cSharpSyntax = getCSharpSyntax();
+document.getElementById("convertButton").addEventListener("click", function( event ) {
+    var inputText = document.getElementById("codeInput").value;
+    var output = convert(inputText, [libSyntax, cSharpSyntax]);
+    document.getElementById("codeOutput").value = output;
+}, false);
+</script>
+
+</body>
+</html>

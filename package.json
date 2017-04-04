@@ -1,0 +1,8 @@
+{
+    "name": "MoodleCode",
+    "description": "Replaces code snippets with formatted nWiki text for use in Moodle.",
+    "authors": "Curtis Windatt",
+    "version": "1.0.0",
+    "main": "app.js",
+    "dependencies": {}
+}
